@@ -34,6 +34,13 @@ ol, ul {
   list-style: none;
 }
 
+a, 
+a:focus,
+a:active  {
+    text-decoration: none;
+    color: var(--mediumGray);
+}
+
 blockquote, q {
   quotes: none;
 }
@@ -45,3 +52,91 @@ q:before, q:after {
 }
 
 
+.features__nested-links,
+.company__nested-links {
+    display: none;
+}
+
+body{
+    font-family: 'Epilogue', sans-serif;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    align-items: center;
+}
+
+.logo{
+    margin-top: 0.6rem;
+    margin-right: 3.5rem;
+    padding: 0;
+    
+}
+
+.logo img {
+    width: 110px;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.items {
+    display: flex;
+    margin-right: 3rem;
+    color: var(--mediumGray);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 16px;
+}
+
+.items a:hover{
+    color: var(--black);
+}
+
+.items img {
+    margin-left: 0.3rem;
+}
+
+
+.sign__btn a {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 2rem;
+    color: var(--mediumGray);
+    cursor: pointer;
+}
+
+.sign__btn a:hover {
+    color: var(--black);
+}
+
+.sign__btn button {
+    background-color: transparent;
+    border-radius: 15px;
+    border: 1px solid var(--mediumGray);
+    padding: 0.8rem;
+    color: var(--mediumGray);
+    font-weight: 500;
+    font-size: 1rem;
+    width: 104px;
+    cursor: pointer;
+}
+
+.sign__btn button:hover {
+    color: var(--black);
+    border: 1px solid var(--black);
+}
