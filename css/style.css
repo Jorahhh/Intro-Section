@@ -61,203 +61,164 @@ body{
     font-family: 'Epilogue', sans-serif;
     height: 100vh;
     background-color: var(--almostWhite);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 header {
     display: flex;
     flex-direction: row;
-    padding: 2rem;
+    position: fixed;
     align-items: center;
-    
+    width: 100%;
+    padding: 3rem;
+    border: 1px solid blue;
 }
 
 .logo{
-    margin-top: 0.6rem;
-    margin-right: 3.5rem;
+    margin-top: 0.8rem;
+    margin-right: 3rem;
     padding: 0;
 }
 
 .logo img {
-    width: 110px;
+    width: 90px;
     cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .logo img:hover {
-    width: 120px;
-    animation:0.2s logo-hover;
+    scale: 1.2;
 }
 
-/*--Logo animation--*/
-@keyframes logo-hover {
-    from {
-        width: 110px;
-    }
-
-    to {
-        width: 120px;
-    }
-}
 
 nav {
     display: flex;
     justify-content: space-between;
+    margin-inline: auto;
     align-items: center;
     width: 100%;
-    
 }
 
 .links {
     display: flex;
     flex-direction: row;
+    padding: 1rem 0;
 }
 
-.items {
+.items{
     display: flex;
+    justify-content: flex-start;
     margin-right: 3rem;
+    height: 100%;
+}
+
+.items:nth-child(4) {
+    margin-right: 0;
+}
+
+
+.items a {
     color: var(--mediumGray);
     font-weight: 500;
-    font-size: 1rem;
     line-height: 16px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
+.items a:hover{
+    color: var(--black);
+    scale: 1.1;
+}
+
+/*--inserting arrows to the links--*/
 #features::after,
 #company::after {
     content: url('../images/icon-arrow-down.svg');
-    margin-left: 0.3rem;
+    margin-left: 0.5rem;
     display: flex;
     align-items: center;
+    transition: transform 0.2s ease-in-out;
 }
 
 .items:hover::after{
     transform: rotate(180deg);
     color: var(--black);
-    animation: 0.1s arrow-rotation;
 }
 
-/*--Arrow hover animation--*/
-@keyframes arrow-rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(45deg);
-    }
-
-    50% {
-        transform: rotate(90deg);
-    }
-
-    75% {
-        transform: rotate(135deg);
-    }
-
-    100% {
-        transform: rotate(180deg);
-    }
-
+.sign__btn {
+    display: flex;
+    align-items: center;
 }
 
-.items a:hover{
-    color: var(--black);
-    animation-name: items-hover;
-    animation-duration: 0.2s;
-    font-size: 1.1rem;
-}
 
-/*--Links hover animation--*/
-@keyframes items-hover {
-
-    from {
-        font-size: 1rem;
-    }
-
-    to {
-        font-size: 1.1rem;
-    }
-    
-}
-
-.sign__btn a {
+.login {
     font-size: 1rem;
     font-weight: 500;
-    margin-right: 2rem;
+    margin-right: 1rem;
     color: var(--mediumGray);
-    animation-duration: 0.2s;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.login:hover {
+    scale: 1.1;
+    color: var(--black);
     cursor: pointer;
 }
 
-.sign__btn a:hover {
-    color: var(--black);
-    font-size: 1.1rem;
-    animation-name: signUp-ani;
-    animation-duration: 0.2s;
-}
-
-/*--SignUp links animation--*/
-@keyframes signUp-ani {
-    from {
-        font-size: 1rem;
-    }
-
-    to {
-        font-size: 1.1rem;
-    } 
-}
 
 .sign__btn button {
     background-color: transparent;
     border-radius: 15px;
     border: 1px solid var(--mediumGray);
-    padding: 0.8rem;
+    padding: 0.7rem;
     color: var(--mediumGray);
     font-weight: 500;
     font-size: 1rem;
     width: 104px;
-    cursor: pointer;
+    margin-bottom: 0.2rem;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    
 }
 
 .sign__btn button:hover {
-    color: var(--black);
+    color: var(--almostWhite);
     border: 1px solid var(--black);
-    font-size: 1.1rem;
-    width: 114px;
-    animation: 0.2s reg_btn-anim;
+    background-color: var(--black);
+    cursor: pointer;
+    scale: 1.1;
 }
 
-/*--Register btn animation--*/
-@keyframes reg_btn-anim {
-    from {
-        font-size: 1rem;
-        width: 104px;
-    }
-    to {
-        font-size: 1.1rem;
-        width: 114px;
-    }
-}
 
+/*--special links section--*/
 
 .features__nested-links {
     position: absolute;
-    top: 100px;
+    top: 110px;
     left: 110px;
     background-color: white;
     box-shadow: 2px 2px 30px #aaaaaa;
     border-radius: 10px;
     padding: 1.5rem 1.5rem 0.5rem 1.5rem;
     font-weight: 400;
+    display: none;
+    
 }
 
 .company__nested-links {
     position: absolute;
-    top: 100px;
+    top: 110px;
     left: 320px;
     background-color: white;
     box-shadow: 2px 2px 18px #aaaaaa;
     border-radius: 10px;
     padding: 1.5rem 1.5rem 0.5rem 1.5rem;
     font-weight: 400;
+    display: none;
+
 }
 
 .FN__items{
@@ -266,7 +227,7 @@ nav {
 }
 
 .FN__items img {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 
 .CN__items{
@@ -277,4 +238,5 @@ nav {
 .FN__items:hover,
 .CN__items:hover {
     color: var(--black);
+    scale: 1.1;
 }
