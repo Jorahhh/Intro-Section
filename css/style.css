@@ -73,7 +73,6 @@ header {
     align-items: center;
     padding: 2rem;
     width: 100%;
-    border: 1px solid green;
 }
 
 .logo{
@@ -96,16 +95,12 @@ header {
 .nav {
     display: flex;
     justify-content: space-between;
-    margin-inline: auto;
-    align-items: center;
     width: 100%;
-    border: 1px solid blue;
 }
 
 .links {
     display: flex;
     flex-direction: row;
-    padding: 1rem 0;
 }
 
 .items{
@@ -113,11 +108,10 @@ header {
     justify-content: flex-start;
     margin-right: 2.5rem;
     color: var(--mediumGray);
+    align-items: center;
     font-weight: 500;
     line-height: 16px;
 }
-
-
 
 .items a{
     -webkit-transition: all 0.2s ease-in-out;
@@ -134,20 +128,20 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 1px solid red;
     height: 100%;
+    cursor: pointer;
 }
 
-#features img,
-#company img{
+#features .arrow,
+#company .arrow{
     margin-left: 0.3rem;
     margin-bottom: 0.05rem;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 
-#features:hover img,
-#company:hover img{
+#features:hover .arrow,
+#company:hover .arrow{
     transform: rotate(180deg);
 }
 
@@ -229,12 +223,12 @@ header {
 }
 
 .features__nested-links {
-    top: 82px;
+    top: 80px;
     left: 100px;
 }
 
 .company__nested-links {
-    top: 82px;
+    top: 80px;
     left: 280px;
 }
 
