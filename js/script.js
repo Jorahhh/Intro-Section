@@ -1,6 +1,26 @@
 const hamb_menu = document.getElementById('hamburger');
 const hamb = document.querySelectorAll('.hamb');
 const navMobile = document.querySelector('.nav');
+const features = document.getElementById('features');
+const company = document.getElementById('company');
+
+
+
+
+const specialLinksActive = (element) => {
+    element.addEventListener('mouseover', () => {
+        if(!element.classList.contains('active')){
+            element.classList.add('active')
+            element.childNodes[2].classList.add('active');
+            const nav = navMobile;
+            nav.addEventListener('mouseleave', () => {
+                element.classList.remove('active');
+                element.childNodes[2].classList.remove('active');
+            })
+        }
+    })
+}
+
 
 
 const activeMenu = () => {
@@ -20,4 +40,6 @@ const activeMenu = () => {
     }
 }
 
+specialLinksActive(features);
+specialLinksActive(company);
 hamb_menu.addEventListener('click', activeMenu);
