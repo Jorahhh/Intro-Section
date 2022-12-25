@@ -208,10 +208,24 @@ header {
 }
 
 .features__nested-links.active,
-.company__nested-links.active{
-    -webkit-transition: all 0.2s ease-in-out;
+.company__nested-links.active {
+    -webkit-transition: all 0.2s 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     display: block;
+}
+
+.features__nested-links{
+    top: 80px;
+    left: 100px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.company__nested-links {
+    top: 80px;
+    left: 280px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .features__nested-links,
@@ -222,15 +236,6 @@ header {
     transition: all 0.2s ease-in-out;
 }
 
-.features__nested-links {
-    top: 80px;
-    left: 100px;
-}
-
-.company__nested-links {
-    top: 80px;
-    left: 280px;
-}
 
 .FN__items,
 .CN__items {
