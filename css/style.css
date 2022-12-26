@@ -300,14 +300,15 @@ header {
         z-index: 990;
         transition: all 0.2s ease-in-out;
         -webkit-transition: all 0.2s ease-in-out;
-        padding: 3rem;
+        padding-right: 3rem;
+        padding-left: 3rem;
     }
 
     .nav {
         flex-direction: column;
         position: absolute;
         justify-content: flex-start;
-        width: 50%;
+        width: 60%;
         height: 100vh;
         padding: 3rem;
         margin: 0;
@@ -321,7 +322,7 @@ header {
 
     .nav.active{
         right: 0;
-        left: 50%;
+        left: 40%;
         border: 1px solid black;
     }
 
@@ -430,7 +431,7 @@ header {
 
 /*--big desktop--*/
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1900px) {
     header {
         padding-right: 8rem;
         padding-left: 8rem;
