@@ -11,36 +11,51 @@ const arrow = document.querySelectorAll('.arrow');
 //Desktop Section
 
 const specialLinksActive = (element) => {
-    element.addEventListener('mouseover', () => {
-        if(!element.classList.contains('active')){
-            element.classList.add('active');
-            element.childNodes[2].classList.add('active');
-            element.addEventListener('mouseleave', () => {
+   let width = window.innerWidth;
+    if(width <= 500){
+        element.addEventListener('click', () => {
+            if(!element.classList.contains('active')){
+                element.classList.add('active');
+                element.childNodes[2].classList.add('active');
+            } else {
                 element.classList.remove('active');
                 element.childNodes[2].classList.remove('active');
-            })
-        }
-    })
+            }
+        })
+
+    } else if (width > 500){
+        element.addEventListener('mouseover', () => {
+            if(!element.classList.contains('active')){
+                element.classList.add('active');
+                element.childNodes[2].classList.add('active');
+                element.addEventListener('mouseleave', () => {
+                    element.classList.remove('active');
+                    element.childNodes[2].classList.remove('active');
+                })
+            }
+        })
+    }
 }
+
+
 
 specialLinksActive(features);
 specialLinksActive(company);
 
 
+
+
 //Mobile & Tablet section
 
-const width = window.innerWidth;
 
 
 const activeMenu = () => {
-    if(width <= 500){
         if(!hamb_menu.classList.contains('active')) {
             hamb_menu.classList.add('active');
             hamb.forEach(line => {
                 line.classList.add('active');
             })
             navMobile.classList.add('active');
-            
         } else {
             hamb_menu.classList.remove('active');
             hamb.forEach(lines => {
@@ -48,9 +63,6 @@ const activeMenu = () => {
             })
             navMobile.classList.remove('active');
         }
-    }
-    
 }
-
 
 hamb_menu.addEventListener('click', activeMenu);
