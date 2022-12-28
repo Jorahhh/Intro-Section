@@ -60,20 +60,24 @@ q:before, q:after {
 
 body{
     font-family: 'Epilogue', sans-serif;
-    height: 100vh;
+    height: 100%;
     background-color: var(--almostWhite);
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
 
+.body.active {
+    background: var(--lightBlack);
+    z-index: 1000;
+}
+
 header {
     display: flex;
     flex-direction: row;
-    position: fixed;
     align-items: center;
-    padding: 2rem;
-    width: 100%;
+    padding: 2rem 3rem;
 }
+
 
 .logo{
     margin-top: 0.6rem;
@@ -261,9 +265,156 @@ header {
 
 
 
+
+
+
+
+
+
+
+/*--Main section--*/
+
+main {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    border: 1px solid red;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1110px ) {
+
+    main {
+        gap: 2%;
+        padding: 2rem 0;
+    }
+    
+}
+
+.text__section {
+    border: 1px solid yellowgreen;
+    display: grid;
+    grid-template-rows: 10% 25% 15% 25%;
+    gap: 2rem;
+}
+
+
+.text__section h1{
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 80px;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    color: var(--black);
+
+    border: 1px solid blue;
+}
+
+.text__section p {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 28px;
+
+    grid-row-start: 3;
+    grid-row-end: 4 ;
+
+    color: var(--mediumGray);
+
+    border: 1px solid slateblue;
+}
+
+.classAction__btn {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+
+    border: none;
+    border-radius: 15px;
+
+    width: 163px;
+    height: 56px;
+
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    color: var(--almostWhite);
+    background-color: var(--black);
+
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.classAction__btn:hover{
+    color: var(--black);
+    background-color: transparent;
+    border: 1px solid var(--black);
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.client__section{
+    border: 1px solid blue;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+}
+
+.hero__image {
+  border: 1px solid blue;
+  width: 480px;
+
+}
+
+.hero__image img {
+    width: 480px;
+    border: 1px solid salmon;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*--Tablet--*/
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 1024px) {
 
     .hamb__menu {
         display: flex;
@@ -429,12 +580,15 @@ header {
 }
 
 
+
+
+
 /*--big desktop--*/
 
 @media screen and (min-width: 1900px) {
     header {
-        padding-right: 8rem;
-        padding-left: 8rem;
+        padding-right: 20rem;
+        padding-left: 20rem;
     }
 
     .features__nested-links{

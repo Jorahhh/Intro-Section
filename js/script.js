@@ -4,6 +4,7 @@ const navMobile = document.querySelector('.nav');
 const features = document.getElementById('features');
 const company = document.getElementById('company');
 const arrow = document.querySelectorAll('.arrow');
+const body = document.querySelector('.body');
 
 
 
@@ -12,7 +13,7 @@ const arrow = document.querySelectorAll('.arrow');
 
 const specialLinksActive = (element) => {
    let width = window.innerWidth;
-    if(width <= 500){
+    if(width <= 990){
         element.addEventListener('click', () => {
             if(!element.classList.contains('active')){
                 element.classList.add('active');
@@ -23,7 +24,7 @@ const specialLinksActive = (element) => {
             }
         })
 
-    } else if (width > 500){
+    } else if (width > 990){
         element.addEventListener('mouseover', () => {
             if(!element.classList.contains('active')){
                 element.classList.add('active');
@@ -56,12 +57,14 @@ const activeMenu = () => {
                 line.classList.add('active');
             })
             navMobile.classList.add('active');
+            body.classList.add('active');
         } else {
             hamb_menu.classList.remove('active');
             hamb.forEach(lines => {
                 lines.classList.remove('active');
             })
             navMobile.classList.remove('active');
+            body.classList.remove('active');
         }
 }
 
