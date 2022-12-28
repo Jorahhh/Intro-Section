@@ -263,21 +263,11 @@ header {
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
 /*--Main section--*/
 
 main {
     margin: 0 auto;
-    padding: 2rem 1rem;
-    border: 1px solid red;
+    padding: 1rem 1rem;
 
     display: flex;
     flex-direction: row;
@@ -298,9 +288,8 @@ main {
 }
 
 .text__section {
-    border: 1px solid yellowgreen;
     display: grid;
-    grid-template-rows: 10% 25% 15% 25%;
+    grid-template-rows: 8% 25% 15% 25%;
     gap: 2rem;
 }
 
@@ -314,8 +303,6 @@ main {
     grid-row-end: 3;
 
     color: var(--black);
-
-    border: 1px solid blue;
 }
 
 .text__section p {
@@ -328,7 +315,6 @@ main {
 
     color: var(--mediumGray);
 
-    border: 1px solid slateblue;
 }
 
 .classAction__btn {
@@ -361,7 +347,6 @@ main {
 }
 
 .client__section{
-    border: 1px solid blue;
     width: 100%;
 
     display: flex;
@@ -374,14 +359,12 @@ main {
 }
 
 .hero__image {
-  border: 1px solid blue;
   width: 480px;
 
 }
 
 .hero__image img {
     width: 480px;
-    border: 1px solid salmon;
 }
 
 
